@@ -1,0 +1,245 @@
+/* Font */
+@font-face {
+    font-family: 'Columbia';
+    src: url('./Columbia\ Light.ttf') format('woff'), 
+         url('./Columbia\ Light.ttf') format('truetype');
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styling */
+body {
+    font-family: 'Columbia', sans-serif;
+    line-height: 1.6;
+    background-color: #5ac47d00; /* Transparent background */
+    color: #333;
+}
+
+/* Headings Styling */
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Header Title */
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+
+/* Navigation Link Styling */
+.nav a {
+    font-size: 1rem;
+    color: #413e3e; /* Dark color for links */
+    padding: 8px 15px; /* Padding around links for better clickability */
+    border-radius: 5px; /* Rounded corners for each link */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Links */
+.nav a:hover {
+    background-color: #da554b; /* Background color on hover */
+    color: #fff; /* Text color changes to white on hover */
+}
+
+/* Responsive Design: Stack Links on Smaller Screens */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center; /* Center the links */
+    }
+
+    .nav a {
+        margin: 10px 0; /* Adjust margin for stacked layout */
+    }
+}
+
+
+  /* For the whole page */
+  body {
+    background-image: url('BG1.jpg');
+    background-size: 100%; /* Scale the image to 120% for a zoomed-out effect */
+    background-repeat: no-repeat;
+    background-position: center 20%; /* Position the image slightly from the top */
+    margin: 50px; /* Ensure body margin is consistent */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content takes the available space */
+    height: 100vh; /* Ensure the body takes the full height of the viewport */
+}
+
+main {
+    flex-grow: 1; /* Ensures main content expands to fill available space */
+    padding: 20px;
+  }
+/*overlay transparent bg*/
+
+body {
+    position: relative; /* Ensure that the body is the containing block for absolute positioning */
+}
+
+/* Pseudo-element for background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    right: 200px;
+    bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.212); /* Transparent white background */
+    z-index: 0; /* Place the pseudo-element behind the text */
+}
+
+/* Content / Text Styling */
+.text-container {
+    position: relative; /* Ensure the text is positioned relative to the parent */
+    z-index: 2; /* Ensure the text appears above the background */
+    padding: 20px; /* Optional padding */
+}
+
+/* Example Text Styling */
+h1, p {
+    color: #333; /* Make sure the text is visible on top of the background */
+}
+
+
+/* Content section styles */
+
+
+body {
+    font-family: 'Columbia', sans-serif;
+}
+
+
+/* Ensure full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Columbia", sans-serif;
+}
+
+/* Center-left the section */
+.section {
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Position the section vertically in the middle */
+    left: 10%; /* Position the section horizontally 10% from the left */
+    transform: translateY(-50%); /* Vertically center the section by adjusting 50% of its height */
+    padding: 2rem; /* Optional padding for spacing */
+    background-color: rgba(255, 255, 255, 0.151); /* Light background for readability */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better visibility */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-list li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Basic styles for the body and html */
+html, body {
+    height: 100%;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+/* Body specific styling */
+body {
+    margin: 0;
+    font-family: "Columbia", sans-serif;
+}
+
+/* Container with smaller margin and padding */
+.container {
+    margin: 0 auto; /* Auto margin to center container */
+    padding: 2rem; /* 2 rem of padding around content */
+    max-width: 1200px; /* Optional: Set a maximum width to prevent it from stretching too wide */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e5034;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content p {
+    font-size: 1rem;
+  }
+  
+  .footer-socials {
+    display: flex;
+    gap: 15px; /* Space between social media links */
+    padding: 20px 0;
+  }
+  
+  .social-link {
+    color: #333; /* Dark text color */
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: color 0.3s;
+  }
+  
+  .social-link i {
+    font-size: 1.4rem; /* Icon size */
+  }
+  
+  .social-link:hover {
+    color: #0077b5; /* Change color on hover (LinkedIn blue as example) */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .contact-form {
+      width: 100%;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-socials a {
+      margin: 10px;
+    }
+  }

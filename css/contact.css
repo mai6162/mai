@@ -1,0 +1,249 @@
+/*font*/
+@font-face {
+    font-family: 'Columbia';
+    src: url('./Columbia\ Light.ttf') format('woff'), 
+         url('./Columbia\ Light.ttf') format('truetype');
+  }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Columbia', sans-serif;
+    line-height: 1.6;
+    background-color: #5ac47d00;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: 700;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /*header {
+    background-color: #ca9a9a3b;
+    color: #da554b;
+    padding: 20px 0;
+    text-align: center;
+  }*/
+  
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .nav {
+    margin-top: 15px;
+  }
+  
+  /* Navigation Link Styling */
+.nav a {
+    font-size: 1rem;
+    color: #413e3e; /* Dark color for links */
+    padding: 8px 15px; /* Padding around links for better clickability */
+    border-radius: 5px; /* Rounded corners for each link */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Links */
+.nav a:hover {
+    background-color: #da554b; /* Background color on hover */
+    color: #fff; /* Text color changes to white on hover */
+}
+   /* For the whole page */
+   body {
+    background-image: url('CT.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    margin: 50;
+    padding: 0;
+}
+/*body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 200px;
+    right: 200px;
+    bottom: 30px;
+    background-color: rgba(230, 222, 222, 0.212); 
+    z-index: 1; 
+}*/
+
+  /* Contact Section */
+  /* Contact Section */
+.contact-section {
+    width: 100%;
+    margin: 60px auto;
+    max-width: 1200px;
+    background-color: #ffffff5e;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute content */
+  }
+  
+  .contact-info {
+    font-size: 1.2rem;
+    color: #dd0909;
+    text-align: left; /* Align text to the left */
+    margin-bottom: 40px;
+    display: block; /* Makes sure it's a block-level element */
+    width: 100%; /* Ensures the element takes the full width of the parent container */
+    padding: 0 10px; /* Adds some padding to prevent text from touching edges */
+}
+
+.contact-form {
+    flex: 1; /* Ensures form takes up equal space with other elements */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%; /* Sets the width to 50% to take up the right half */
+    margin-left: auto; /* Pushes the form to the right */
+    margin-right: 0; /* Ensures there's no margin on the right side */
+}
+
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .contact-form input[type="submit"] {
+    width: 100%;
+    padding: 5px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+/* Basic styles for the body and html */
+html, body {
+    height: 100%; /* Ensure the body takes full height of the viewport */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+/* Body specific styling */
+body {
+    display: flex; /* Use flexbox for the body */
+    flex-direction: column; /* Stack children elements vertically */
+    margin: 0;
+    font-family: "Columbia", sans-serif;
+    justify-content: flex-start; /* Align content to the top of the page */
+}
+
+/* Ensure child elements like divs or sections are stacked vertically */
+section, div {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    width: 100%; /* Make sure each section takes the full width */
+}
+
+/* Optional: Add a little margin to give space between text elements */
+section, div {
+    margin-bottom: 20px; /* Add space between elements */
+}
+
+
+/* Container with smaller margin and padding */
+.container {
+    margin: 0 auto; /* Auto margin to center container */
+    padding: 2rem; /* 2 rem of padding around content */
+    max-width: 1200px; /* Optional: Set a maximum width to prevent it from stretching too wide */
+    flex: 1; /* This ensures the content takes up all the available space */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e5034;
+    color: #fff;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%; /* Ensure the footer stretches across the full width */
+    position: relative;
+    bottom: 0;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*.footer-content p {
+    font-size: 1rem;
+}*/
+
+.footer-socials {
+    display: flex;
+    gap: 15px; /* Space between social media links */
+    padding: 20px 0;
+}
+
+.social-link {
+    color: #333; /* Dark text color */
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: color 0.3s;
+}
+
+.social-link i {
+    font-size: 1.4rem; /* Icon size */
+}
+
+.social-link:hover {
+    color: #0077b5; /* Change color on hover (LinkedIn blue as example) */
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-socials a {
+        margin: 10px;
+    }
+}
