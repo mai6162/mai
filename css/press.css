@@ -184,7 +184,7 @@ body {
     max-width: 1200px; /* Optional: Set a maximum width to prevent it from stretching too wide */
 }
 
-/* Footer Styles */
+/* Footer Styles 
 footer {
     background-color: #2c3e5034;
     color: #fff;
@@ -226,7 +226,7 @@ footer {
   
   .social-link:hover {
     color: #0077b5; /* Change color on hover (LinkedIn blue as example) */
-  }
+  }*/
   
   
   @media (max-width: 768px) {
