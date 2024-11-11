@@ -135,6 +135,17 @@ body {
     font-family: "Columbia", sans-serif;
 }
 
+/* Center-left the section 
+.section {
+    position: absolute; 
+    top: 50%;
+    left: 10%; 
+    transform: translateY(-50%); 
+    padding: 2rem; 
+    background-color: rgba(255, 255, 255, 0.151);
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}*/
 /* Center-left the section */
 .section {
     position: absolute; /* Absolute positioning */
@@ -142,9 +153,35 @@ body {
     left: 10%; /* Position the section horizontally 10% from the left */
     transform: translateY(-50%); /* Vertically center the section by adjusting 50% of its height */
     padding: 2rem; /* Optional padding for spacing */
-    background-color: rgba(255, 255, 255, 0.151); /* Light background for readability */
+    /* background-color: rgba(255, 255, 255, 0.151); */ /* Removed background */
     border-radius: 8px; /* Optional: rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better visibility */
+    z-index: 10; /* Ensure the section appears above overlays and backgrounds */
+    width: 80%; /* Make the section width responsive */
+    max-width: 600px; /* Set a maximum width for larger screens */
+}
+
+.section * {
+    z-index: 11; /* Ensure all text and child elements appear above the section itself */
+    position: relative; /* Ensure z-index is applied to child elements */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .section {
+        left: 5%; /* Adjust horizontal position for smaller screens */
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+    .section {
+        left: 2%; /* Adjust horizontal position for very small screens */
+        width: 96%; /* Adjust width for very small screens */
+        padding: 1rem; /* Adjust padding for very small screens */
+    }
 }
 
 h2 {
