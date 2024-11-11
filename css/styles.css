@@ -45,6 +45,7 @@ a {
     align-items: center;
     width: 100%; /* Ensure full width for proper spacing */
     padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: background for clarity */
 }
 
 .nav a {
@@ -59,25 +60,6 @@ a {
 .nav a:hover {
     background-color: #da554b;
     color: #fff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    /* Stack the nav links vertically */
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav a {
-        margin: 10px 0;
-    }
-
-    /* Adjust header title size */
-    .header h1 {
-        font-size: 2rem;
-        text-align: center; /* Ensure it's centered */
-    }
 }
 
 /* Full-Page Background Image */
@@ -132,9 +114,9 @@ h1, p {
 /* Centered Section */
 .section {
     position: absolute;
-    top: 50%;
+    top: 50%; /* Adjust position downward */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Ensure it's centered on large screens */
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 8px;
@@ -146,8 +128,14 @@ h1, p {
 @media (max-width: 768px) {
     .section {
         width: 80%; /* Adjust width for mobile */
-        top: auto;
-        transform: translateY(0); /* No vertical translate */
+        top: 60%; /* Move section downward */
+        transform: translate(-50%, -60%); /* Adjust position on small screens */
+    }
+
+    /* Adjust header title size */
+    .header h1 {
+        font-size: 2rem;
+        text-align: center; /* Ensure it's centered */
     }
 }
 
