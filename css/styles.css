@@ -111,30 +111,27 @@ h1, p {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-    body::before {
-        top: 50px;
-        left: 50px;
-        right: 50px;
-        bottom: 20px;
-    }
-
-    .text-container {
-        padding: 15px;
-    }
-}
-
 @media (max-width: 480px) {
-    body::before {
-        top: 20px;
-        left: 20px;
-        right: 20px;
-        bottom: 10px;
-    }
-
-    .text-container {
-        padding: 10px;
-    }
+  /* Smaller screen adjustments */
+  .header h1 {
+      font-size: 1.75rem;
+  }
+  h2 {
+      font-size: 1rem;
+  }
+  .nav a {
+      font-size: 0.85rem;
+      padding: 5px 10px;
+  }
+  .photo-frame {
+      height: 150px;
+  }
+  .resume-section h2 {
+      font-size: 2rem;
+  }
+  .footer-content p {
+      font-size: 0.9rem;
+  }
 }
 
 
