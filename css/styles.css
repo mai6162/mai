@@ -38,6 +38,11 @@ a {
 }
 
 /* Navigation Link Styling */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .nav a {
     font-size: 1rem;
     color: #413e3e;
@@ -54,6 +59,7 @@ a {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Stack the nav links vertically */
     .nav {
         flex-direction: column;
         align-items: center;
@@ -61,6 +67,11 @@ a {
 
     .nav a {
         margin: 10px 0;
+    }
+
+    /* Adjust header title size */
+    .header h1 {
+        font-size: 2rem;
     }
 }
 
@@ -107,7 +118,6 @@ body {
     z-index: 0; /* Ensure body does not interfere with other content */
 }
 
-
 /* Content/Text Styling */
 .text-container {
     position: relative;
@@ -141,6 +151,7 @@ h1, p {
     }
 }
 
+/* Ensure the header text remains large on small screens */
 h2 {
     font-size: 2rem;
     color: #333;
@@ -219,5 +230,10 @@ footer .footer-container {
 
     .footer-socials a {
         margin: 10px;
+    }
+
+    /* Adjust the footer text size for smaller screens */
+    .footer-content p {
+        font-size: 0.9rem;
     }
 }
