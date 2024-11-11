@@ -17,6 +17,83 @@
     </nav>
   </header>
 
+  <style>
+    /* Section Styling */
+    .section {
+        display: flex;
+        gap: 1rem;
+        max-width: flex;
+        width: 100%;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff15;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        align-items: center; /* Center-align content vertically */
+    }
+
+    .left-column {
+        flex: 3; /* 75% width */
+        padding-right: 1rem;
+    }
+
+    .right-column {
+        flex: 1; /* 25% width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #cccccc34;
+        border-radius: 8px;
+        padding: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 100%; /* Make the frame adjust to content height */
+    }
+
+    .right-column img {
+        max-width: 100%;
+        max-height: 100px; /* Adjust the max height as needed */
+        height: auto;
+        width: auto;
+        object-fit: cover; 
+        border-radius: 8px;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        .section {
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .left-column, .right-column {
+            flex: unset;
+            width: 100%;
+        }
+
+        .left-column {
+            padding-right: 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<section class="section">
+<!-- Left Column (Text, 75%) -->
+<div class="left-column">
+    <h2>My digital foodprints</h2>
+    By the media <br>
+    And <br>
+    My publications</p>
+</div>
+
+<!-- Right Column (Photo, 25%) -->
+<div class="right-column">
+    <img src="./css/BG.jpg" alt="Framed photo">
+</div>
+</section>
+
   <section class="section">
     <h2>What I wrote</h2>
     <div class="press-content">
