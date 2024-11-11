@@ -101,6 +101,13 @@ body::before {
     z-index: 1; /* Set higher z-index for all content */
 }
 
+/* Ensuring that the body has a higher stacking context */
+body {
+    position: relative;
+    z-index: 0; /* Ensure body does not interfere with other content */
+}
+
+
 /* Content/Text Styling */
 .text-container {
     position: relative;
