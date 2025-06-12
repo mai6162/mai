@@ -287,7 +287,48 @@ footer {
   .social-link:hover {
     color: #0077b5; /* Change color on hover (LinkedIn blue as example) */
   }
-  
+
+/* Make the footer stick to the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+}
+
+.section {
+  flex: 1; /* This makes sure the content takes available space */
+  padding: 20px;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 15px 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-socials a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-socials a:hover {
+  color: #0077b5; /* LinkedIn blue or any accent color */
+}
+
   
   @media (max-width: 768px) {
     .contact-form {
