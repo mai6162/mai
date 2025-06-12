@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Columbia';
-    src: url('./Columbia\ Light.ttf') format('woff'), 
-         url('./Columbia\ Light.ttf') format('truetype');
+    src: url('./Columbia Light.ttf') format('woff'),
+         url('./Columbia Light.ttf') format('truetype');
 }
 
 /* General Reset */
@@ -15,7 +15,7 @@
 body {
     font-family: 'Columbia', sans-serif;
     line-height: 1.6;
-    background-color: #5ac47d00; /* Transparent background */
+    background-color: #5ac47d00;
     color: #333;
 }
 
@@ -30,67 +30,56 @@ a {
     color: inherit;
 }
 
-
 /* Header Title */
 .header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-
 /* Navigation Link Styling */
 .nav a {
     font-size: 1rem;
-    color: #413e3e; /* Dark color for links */
-    padding: 8px 15px; /* Padding around links for better clickability */
-    border-radius: 5px; /* Rounded corners for each link */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    color: #413e3e;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover Effect for Links */
 .nav a:hover {
-    background-color: #da554b; /* Background color on hover */
-    color: #fff; /* Text color changes to white on hover */
+    background-color: #da554b;
+    color: #fff;
 }
 
-/* Responsive Design: Stack Links on Smaller Screens */
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column; /* Stack the links vertically */
-        align-items: center; /* Center the links */
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav a {
-        margin: 10px 0; /* Adjust margin for stacked layout */
+        margin: 10px 0;
     }
 }
 
-
 /* For the whole page */
 body {
-  background-image: url('169 full.jpg');
-  background-size: cover; /* Makes image cover the entire body area */
-  background-repeat: no-repeat;
-  background-position: right center; /* Align the background to the right center */
-  margin: 0; /* Set margin to 0 for full control */
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+    background-image: url('169 full.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
-main {
-  flex-grow: 1;
-  padding: 20px;
-}
-/*overlay transparent bg*/
-
+/* Transparent overlay */
 body {
-    position: relative; /* Ensure that the body is the containing block for absolute positioning */
+    position: relative;
 }
 
-/* Pseudo-element for background */
 body::before {
     content: "";
     position: absolute;
@@ -98,55 +87,48 @@ body::before {
     left: 200px;
     right: 200px;
     bottom: 30px;
-    background-color: rgba(255, 255, 255, 0.212); /* Transparent white background */
-    z-index: 0; /* Place the pseudo-element behind the text */
+    background-color: rgba(255, 255, 255, 0.212);
+    z-index: 0;
 }
 
-/* Content / Text Styling */
 .text-container {
-    position: relative; /* Ensure the text is positioned relative to the parent */
-    z-index: 2; /* Ensure the text appears above the background */
-    padding: 20px; /* Optional padding */
+    position: relative;
+    z-index: 2;
+    padding: 20px;
 }
 
-/* Example Text Styling */
 h1, p {
-    color: #333; /* Make sure the text is visible on top of the background */
+    color: #333;
 }
-
-
-/* Content section styles */
-
 
 body {
     font-family: 'Columbia', sans-serif;
 }
+
 /* Responsive styles */
 @media (max-width: 480px) {
-  /* Smaller screen adjustments */
-  .header h1 {
-      font-size: 1.75rem;
-  }
-  h2 {
-      font-size: 1rem;
-  }
-  .nav a {
-      font-size: 0.85rem;
-      padding: 5px 10px;
-  }
-  .photo-frame {
-      height: 150px;
-  }
-  .resume-section h2 {
-      font-size: 2rem;
-  }
-  .footer-content p {
-      font-size: 0.9rem;
-  }
+    .header h1 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    .nav a {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+    }
+    .photo-frame {
+        height: 150px;
+    }
+    .resume-section h2 {
+        font-size: 2rem;
+    }
+    .footer-content p {
+        font-size: 0.9rem;
+    }
 }
 
-
-/* Ensure full height of the viewport */
+/* Ensure full height */
 html, body {
     height: 100%;
     margin: 0;
@@ -157,53 +139,38 @@ body {
     font-family: "Columbia", sans-serif;
 }
 
-/* Center-left the section old
+/* Center-left section */
 .section {
-    position: absolute; 
-    top: 50%; 
+    position: absolute;
+    top: 50%;
     left: 10%;
-    transform: translateY(-50%); 
-    padding: 2rem; 
-   
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-}*/
-
-/* Center-left the section */
-.section {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Position the section vertically in the middle */
-    left: 10%; /* Position the section horizontally 10% from the left */
-    transform: translateY(-50%); /* Vertically center the section by adjusting 50% of its height */
-    padding: 2rem; /* Optional padding for spacing */
-    /* background-color: rgba(255, 255, 255, 0.151); */ /* Removed background */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better visibility */
-    z-index: 10; /* Ensure the section appears above overlays and backgrounds */
-    width: 80%; /* Make the section width responsive */
-    max-width: 600px; /* Set a maximum width for larger screens */
+    transform: translateY(-50%);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 80%;
+    max-width: 600px;
 }
 
 .section * {
-    z-index: 11; /* Ensure all text and child elements appear above the section itself */
-    position: relative; /* Ensure z-index is applied to child elements */
+    z-index: 11;
+    position: relative;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 768px) {
     .section {
-        left: 5%; /* Adjust horizontal position for smaller screens */
-        width: 90%; /* Adjust width for smaller screens */
-        padding: 1.5rem; /* Adjust padding for smaller screens */
+        left: 5%;
+        width: 90%;
+        padding: 1.5rem;
     }
 }
 
-/* Media query for very small screens */
 @media (max-width: 480px) {
     .section {
-        left: 2%; /* Adjust horizontal position for very small screens */
-        width: 96%; /* Adjust width for very small screens */
-        padding: 1rem; /* Adjust padding for very small screens */
+        left: 2%;
+        width: 96%;
+        padding: 1rem;
     }
 }
 
@@ -224,108 +191,94 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* Basic styles for the body and html */
+/* Container */
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+/* Sticky footer layout */
 html, body {
     height: 100%;
-    margin: 0; /* Reset default margin */
-    padding: 0; /* Reset default padding */
-}
-
-/* Body specific styling */
-body {
-    margin: 0;
-    font-family: "Columbia", sans-serif;
-}
-
-/* Container with smaller margin and padding */
-.container {
-    margin: 0 auto; /* Auto margin to center container */
-    padding: 2rem; /* 2 rem of padding around content */
-    max-width: 1200px; /* Optional: Set a maximum width to prevent it from stretching too wide */
-}
-
-/* Base layout to enable sticky footer */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
-  flex: 1;
+    flex: 1;
 }
 
-/* Ensure main content expands to fill available space */
 main, .section, .content {
-  flex: 1;
-  padding: 20px;
+    flex: 1;
+    padding: 20px;
 }
 
-/* Footer Styles */
+/* Footer Styles — updated for responsiveness */
 footer {
-  background-color: #f8f8f8;
-  color: #333;
-  padding: 20px 0;
-  border-top: 1px solid #ddd;
-  width: 100%;
-  text-align: center;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
 }
 
 .footer-content p {
-  font-size: 1rem;
-  margin: 10px 0;
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
 .footer-socials {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
 }
 
 .social-link {
-  color: #333;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.3s ease;
+    color: #333;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
 }
 
 .social-link i {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 .social-link:hover {
-  color: #0077b5; /* LinkedIn blue or preferred accent */
+    color: #0077b5;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  .footer-socials {
-    justify-content: center;
-  }
+    .footer-socials {
+        justify-content: center;
+    }
 
-  .footer-socials a {
-    margin: 10px;
-  }
+    .footer-socials a {
+        margin: 10px;
+    }
 }
