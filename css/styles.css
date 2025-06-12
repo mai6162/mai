@@ -244,51 +244,59 @@ body {
     max-width: 1200px; /* Optional: Set a maximum width to prevent it from stretching too wide */
 }
 
-/* Footer Styles */
+/* Base Footer Styles */
 footer {
-    background-color: #2c3e5034;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  footer .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-content p {
-    font-size: 1rem;
-  }
-  
-  .footer-socials {
-    display: flex;
-    gap: 15px; /* Space between social media links */
-    padding: 20px 0;
-  }
-  
-  .social-link {
-    color: #333; /* Dark text color */
-    font-size: 1.2rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Space between icon and text */
-    transition: color 0.3s;
-  }
-  
-  .social-link i {
-    font-size: 1.4rem; /* Icon size */
-  }
-  
-  .social-link:hover {
-    color: #0077b5; /* Change color on hover (LinkedIn blue as example) */
-  }
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
 
-/* Make the footer stick to the bottom */
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* Social Links */
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.social-link {
+  color: #333;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.social-link i {
+  font-size: 1.4rem;
+}
+
+.social-link:hover {
+  color: #0077b5; /* Example: LinkedIn blue */
+}
+
+/* Sticky Footer Layout */
 html, body {
   height: 100%;
   margin: 0;
@@ -301,46 +309,25 @@ body {
   flex: 1;
 }
 
-.section {
-  flex: 1; /* This makes sure the content takes available space */
+main, .section {
+  flex: 1;
   padding: 20px;
 }
 
-footer {
-  background-color: #f8f8f8;
-  padding: 15px 20px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-}
-
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.footer-socials a {
-  color: #333;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.footer-socials a:hover {
-  color: #0077b5; /* LinkedIn blue or any accent color */
-}
-
-  
-  @media (max-width: 768px) {
-    .contact-form {
-      width: 100%;
-    }
-  
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-socials a {
-      margin: 10px;
-    }
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
+  .footer-socials {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-link {
+    font-size: 1rem;
+  }
+}
