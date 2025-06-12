@@ -66,24 +66,24 @@ a {
 }
 
 
- /* For the whole page */
-  body {
-    background-image: url('PP.jpg');
-    background-size: 100%; /* Scale the image to 120% for a zoomed-out effect */
-    background-repeat: no-repeat;
-    background-position: center 20%; /* Position the image slightly from the top */
-    margin: 50px; /* Ensure body margin is consistent */
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures content takes the available space */
-    height: 100vh; /* Ensure the body takes the full height of the viewport */
+/* For the whole page */
+body {
+  background-image: url('PP.jpg');
+  background-size: cover; /* Makes image cover the entire body area */
+  background-repeat: no-repeat;
+  background-position: right center; /* Align the background to the right center */
+  margin: 0; /* Set margin to 0 for full control */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 main {
-    flex-grow: 1; /* Ensures main content expands to fill available space */
-    padding: 20px;
-  }
+  flex-grow: 1;
+  padding: 20px;
+}
 /*overlay transparent bg*/
 
 body {
