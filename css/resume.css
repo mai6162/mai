@@ -243,3 +243,17 @@ footer .footer-container {
 .footer-socials a:hover {
   color: #3498db;
 }
+/* Only links inside a <ul> after <h3>Work</h3> */
+h3:contains("Work") + ul a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h3:contains("Work") + ul a:hover {
+    color: #da554b;
+    text-decoration: underline;
+    background: rgba(218, 85, 75, 0.08);
+    padding: 1px 4px;
+    border-radius: 4px;
+}
