@@ -176,3 +176,74 @@ footer {
 .social-link:hover {
     color: #0077b5;
 }
+/* ───────────────────────────────────────────────
+   NEW RULES ADDED FOR HORIZONTAL CARD LAYOUT
+   (add these at the very end of your press.css file)
+   ─────────────────────────────────────────────── */
+
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.8rem 2rem;
+    margin-top: 1.5rem;
+}
+
+.press-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-left: 5px solid #da554b;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.press-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(218, 85, 75, 0.18);
+}
+
+.press-card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.65rem;
+    color: #da554b;
+}
+
+.press-card p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.press-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.press-card li {
+    margin-bottom: 0.85rem;
+    font-size: 1.05rem;
+    line-height: 1.45;
+}
+
+.press-card a {
+    color: #2c5282;
+    text-decoration: none;
+}
+
+.press-card a:hover {
+    color: #da554b;
+    text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .press-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .press-grid {
+        grid-template-columns: 1fr;
+    }
+}
