@@ -3,191 +3,361 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <!-- SEO Title -->
   <title>Mai Nguyen in the Press – Entrepreneur | MIT Fellow '22 | Laca City Smart Cities & Mobility</title>
-
   <!-- SEO Meta Description -->
   <meta name="description" content="Explore press features, interviews, and articles covering Mai Nguyen, an MIT-trained urban planner driving innovation in smart cities and sustainable development across Asia Pacific." />
-
   <!-- Open Graph (OG) Tags -->
   <meta property="og:title" content="Mai Nguyen in the Press – Entrepreneur | MIT Urban Planner Fellow" />
   <meta property="og:description" content="See how Mai Nguyen’s work in urban innovation, smart mobility and sustainable finance has been featured in leading press and media outlets." />
   <meta property="og:url" content="https://mai-nn.com/press" />
   <meta property="og:image" content="https://mai-nn.com/images/mai-nguyen-mit.jpg">
-
   <!-- Twitter Card -->
   <meta name="twitter:title" content="Mai Nguyen in the Press – MIT Urban Planner" />
   <meta name="twitter:description" content="Interviews, articles, and features highlighting Mai Nguyen’s impact on urban development, smart mobility, sustainable finance in Vietnam, Asia Pacific and North America." />
-
   <!-- Canonical Link -->
   <link rel="canonical" href="https://mai-nn.com/press" />
-
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/press.css" />
-
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
-</head>
-
-<body>
-  <header class="header">
-    <h1 class="logo">Mai Nguyen</h1>
-    <nav class="nav">
-      <a href="/">Home</a>
-      <a href="/resume/">Resume</a>
-      <a href="/press/">Press</a>
-      <a href="/contact/">Contact</a>
-    </nav>
-
-  </header>
 
   <style>
-    /* Section Styling */
-    .section {
+    /* Your original CSS exactly as on the live site + minimal additions for horizontal layout */
+
+    @font-face {
+        font-family: 'Columbia';
+        src: url('./Columbia\ Light.ttf') format('woff'), 
+             url('./Columbia\ Light.ttf') format('truetype');
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Columbia', sans-serif;
+        line-height: 1.6;
+        background-image: url('');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
         display: flex;
-        gap: 1rem;
-        max-width: flex;
-        width: 100%;
-        margin: 2rem auto;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .container {
+        margin: 0 auto;
         padding: 2rem;
-        background-color: #ffffff15;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    @media (max-width: 768px) {
+        .header h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header h1 {
+            font-size: 1.75rem;
+        }
+    }
+
+    .nav {
+        display: flex;
+        justify-content: left;
+        gap: 1rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+        color: #413e3e;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .nav a:hover {
+        background-color: #da554b;
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .nav {
+            align-items: left;
+        }
+        .nav a {
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+    }
+
+    .section {
+        padding: 2rem;
+        background-color: #ffffff3a;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        align-items: center; /* Center-align content vertically */
+        margin: 2rem 0;
     }
 
-    .left-column {
-        flex: 3; /* 75% width */
-        padding-right: 1rem;
+    @media (max-width: 768px) {
+        .section {
+            padding: 1.5rem;
+        }
     }
 
-    .right-column {
-        flex: 1; /* 25% width */
+    @media (max-width: 480px) {
+        .section {
+            padding: 1rem;
+        }
+    }
+
+    h1, h2, h3, h4 {
+        font-weight: 700;
+        color: #333;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .about-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .about-list li {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .about-list li {
+            font-size: 1rem;
+        }
+    }
+
+    footer {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid #cccccc34;
-        border-radius: 8px;
-        padding: 0.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        height: 100%; /* Make the frame adjust to content height */
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .right-column img {
-        max-width: 100%;
-        max-height: 100px; /* Adjust the max height as needed */
-        height: auto;
-        width: auto;
-        object-fit: cover; 
-        border-radius: 8px;
+    .footer-socials {
+        display: flex;
+        gap: 15px;
     }
 
-    /* Responsive Styling */
+    .social-link {
+        color: #333;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-link:hover {
+        color: #0077b5;
+    }
+
+    /* ──────────────────────────────
+       NEW: Horizontal cards layout
+       ────────────────────────────── */
+    .press-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 1.8rem 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .press-card {
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        border-left: 5px solid #da554b;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .press-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(218, 85, 75, 0.18);
+    }
+
+    .press-card h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.65rem;
+        color: #da554b;
+    }
+
+    .press-card p {
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+    }
+
+    .press-card ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .press-card li {
+        margin-bottom: 0.85rem;
+        font-size: 1.05rem;
+        line-height: 1.45;
+    }
+
+    .press-card a {
+        color: #2c5282;
+        text-decoration: none;
+    }
+
+    .press-card a:hover {
+        color: #da554b;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 992px) {
+        .press-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+    }
+
     @media (max-width: 768px) {
-        .section {
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
-        }
-
-        .left-column, .right-column {
-            flex: unset;
-            width: 100%;
-        }
-
-        .left-column {
-            padding-right: 0;
+        .press-grid {
+            grid-template-columns: 1fr;
         }
     }
-</style>
+  </style>
 </head>
 <body>
 
-<section class="section">
-<!-- Left Column (Text, 75%) -->
-<div class="left-column">
-    <h2>My digital foodprints</h2>
-    By the media <br>
-    And <br>
-    My publications</p>
-</div>
+  <div class="container">
 
-<!-- Right Column (Photo, 25%) -->
-<div class="right-column">
-    <img src="/images/mai-nguyen-press.jpg" alt="Mai Nguyen Press" />
-</div>
-</section>
+    <header class="header">
+      <h1>Mai Nguyen</h1>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/resume/">Resume</a>
+        <a href="/press/">Press</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
 
-  <section class="section">
-    <h2>What I wrote</h2>
-    <div class="press-content">
-      <p>My published articles:</p>
-      <ul class="press-list">
-        <li><a href="https://www.tinnhanhchungkhoan.vn/chuoi-cung-ung-thich-ung-chien-luoc-quan-trong-cho-doanh-nghiep-viet-post381266.html" target="_blank">"Resilient Supply Chains: A Critical Strategy for Vietnamese Businesses"</a></li>
-        <li><a href="https://thesaigontimes.vn/dau-tu-vao-kha-nang-chong-chiu-thien-tai-2-tu-nhan-thuc-den-hanh-dong/" target="_blank">"Investing in Resilience Part 2" - The Saigon Times</a></li>
-        <li><a href="https://thesaigontimes.vn/dau-tu-vao-kha-nang-chong-chiu-thien-tai-ky-1-co-hoi-chien-luoc-cho-viet-nam/" target="_blank">"Investing in Resilience Part 1" - The Saigon Times</a></li>
-        <li><a href="https://vir.com.vn/private-sector-offers-up-urban-potential-129699.html" target="_blank">"Private sector offers up urban potential, 2025 (No 1 most viewed)" - VIR</a></li>
-        <li><a href="https://vir.com.vn/epaper#" target="_blank">"The role of governance in shaping corporate development" - VIR Special Edition</a></li>
-        <li><a href="https://vir.com.vn/precise-planning-vital-for-relocation-of-ips-113193.html" target="_blank">"Precise planning vital for relocation of IPs 2024" - VIR</a></li>
-        <li><a href="https://vir.com.vn/the-pros-and-cons-of-ip-relocations-112404.html" target="_blank">"The pros and cons of IP relocations" - VIR</a></li>
-        <li><a href="https://vir.com.vn/opportunities-to-unlock-in-vietnams-green-finance-arena-110442.html" target="_blank">"Opportunities to unlock in Vietnam’s green finance arena" - VIR</a></li>
-        <li><a href="https://vir.com.vn/how-real-estate-developers-can-benefit-from-esg-considerations-99226.html" target="_blank">"How real estate developers can benefit from ESG considerations 2023, No 1 most viewed" - VIR</a></li>
-        <li><a href="https://baodautu.vn/dau-tu-tu-nhan-kien-tao-do-thi-thong-minh-ben-vung-d299998.html" target="_blank">"Đầu tư tư nhân kiến tạo đô thị thông minh, bền vững</a></li>
-        <li><a href="https://www.tinnhanhchungkhoan.vn/tai-chinh-do-thi-dich-chuyen-dong-von-xanh-post347485.html" target="_blank">"Tài chính đô thị “dịch chuyển” dòng vốn xanh"</a></li>
-        <li><a href="https://dantri.com.vn/kinh-doanh/tiep-can-esg-bat-dau-tu-dau-lam-sao-toi-da-hieu-qua-nguon-luc-20240411153558726.htm" target="_blank">"Navigating ESG: Initial Steps and Strategies for Optimal Resource Utilization (In Vietnamese) 2024" - Dan Tri</a></li>
-        <li><a href="https://thanhnien.vn/nha-o-binh-dan-lam-sao-tang-nguon-cung-hieu-qua-post1518943.html" target="_blank">"Affordable housing - How to increase the supply effectively</a></li>
-        <li><a href="https://e.vnexpress.net/news/perspectives/saigon-river-has-much-to-offer-and-hcmc-should-use-it-smartly-4515082.html" target="_blank">"Saigon River basin planning" - VNExpress Opinion</a></li>
-    </ul>
-    </div>
-<br>
-    <h2>Wrote about me</h2>
-    <div class="press-content">
-      <p>Here are some press mentions and features about me:</p>
-      <ul class="press-list">
-        <li><a href="https://baodautu.vn/nguyen-thi-mai-nha-sang-lap-smartf-kien-tao-cong-dong-tai-chinh-thong-minh-cho-nguoi-viet-d343742.html" target="_blank">Featured in Bao Dau Tu about my work (in Vietnamese)</a></li>
-        <li><a href="https://thanhnien.vn/di-dau-cung-huong-ve-viet-nam-185230828155022757.htm" target="_blank">Featured in Thanh Nien about my work (in Vietnamese) - (Once a year) Special edition for Vietnam Independent Day</a></li>
-        <li><a href="https://thanhnien.vn/nu-ky-su-viet-nam-o-ngoi-truong-so-1-the-gioi-1851492425.htm" target="_blank">Featured in Thanh Nien about my work (in Vietnamese)" - top-read article of the day</a></li>
-        <li><a href="https://thanhnien.vn/tu-my-toi-viet-nam-theo-duoi-dam-me-song-nuoc-cuu-long-post1512582.html" target="_blank">Publicly endorsed the work of other (in Vietnamese) - Thanh Nien</a></li>
-        <li><a href="https://www.mekongeye.com/2024/01/15/houses-that-breathe-vietnamese-architects-turning-the-tide-to-tackle-climate-change" target="_blank">Expert opinion on Mekong Eye</a></li>
-        <li><a href="https://https://dantri.com.vn/kinh-doanh/quan-tri-doanh-nghiep-theo-dinh-huong-esg-lam-gi-va-tu-dau-20240817091217301.htm" target="_blank">Expert opinion on Dan Tri</a></li>
-        <li><a href="https://thanhnien.vn/nam-hoc-moi-co-con-am-anh-nha-ve-sinh-truong-hoc-18523082220024006.htm" target="_blank">Expert opinion on Thanh Nien</a></li>
-        <li><a href="https://tienphong.vn/tam-voc-nhung-cong-trinh-vi-cong-dong-post742025.tpo" target="_blank">In Tien Phong Newspaper about my graduation thesis (In Vietnamese)</a></li>
-    </ul>
-    </div>
+    <section class="section">
+      <h2>My digital foodprints</h2>
+      By the media <br>
+      And <br>
+      My publications
+    </section>
 
-    <br>
-    <h2>Media</h2>
-    <div class="press-content">
-      <p>Featured in social media channels of organizations and programs:</p>
-      <ul class="press-list">
-        <li><a href="https://www.facebook.com/share/p/14nQpvcMaF/" target="_blank">"Featured in the U.S. Consulate HCMC media channel about my contribution</a></li>
-        <li><a href="https://www.facebook.com/share/p/1Cbed3BooZ/" target="_blank">"Featured in the U.S. Consulate HCMC media channel</a></li>
-        <li><a href="https://www.humphreyfellowship.org/humphrey-alumni/east-asia-and-pacific/" target="_blank">"Highlighted Alumni's activities on the Humphrey Fellowship Program Website"</a></li>
-        <li><a href="https://www.facebook.com/usembassyhanoi/posts/pfbid034RtLNGcdvrk5ef6dqeasZHZYbV8SEmdCDCdUHEBTZXG1uwzvHqJjPn52ePaW7RY5l" target="_blank">"Featured in the U.S. Embassy in Vietnam media channel - 2022</a></li>
-        <li><a href="https://dusp.mit.edu/spurs-fellows/mai-thi-nguyen" target="_blank">"MIT Department of Urban Studies and Planning (MIT DUSP - SPURS)</a></li>
-        <li><a href="https://twitter.com/HumphreyProgram/status/1492150263515578368?s=20&t=YoyXl313ZsJK50T9z6Szhw" target="_blank">"Humphrey Fellowship featured outstanding female engineers</a></li>
-    </ul>
-    </div>
+    <section class="section">
+      <div class="press-grid">
 
-    <br>
-    <h2>Speaking</h2>
-    <div class="press-content">
-      <p>participation as a speaker panelist judge reviewer</p>
-      <ul class="press-list">
-        <li><a href="https://events.trade.gov/TradeGov/USVietnamGettingtoNet-ZeroRoadmaptoIndustryDev/" target="_blank">"U.S. Vietnam Getting to Net-Zero: Roadmap to Sustainable Industrial Development, 2025"</a></li>
-        <li><a href="https://open.spotify.com/episode/2XPeTRU1qiMQIUqhxR3Pwf" target="_blank">"Guest Appearance on the Vietnam Weekly Podcast - Building Resilience in Vietnam"</a></li>
-        <li><a href="https://nordchamvietnam.com/event/green-construction-conference/" target="_blank">"2024 NordCham Vietnam Green Construction Conference, HCMC"</a></li>
-        <li><a href="https://vnanet.vn/en/anh/vna-photos-1027/conference-mobilises-resources-for-nature-based-agricultural-development-7282961.html" target="_blank">"Mobilises resources for nature-based agricultural development, 2024, hosted by WWF and Ministry of Agriculture and Rural Development, in Ca Mau, Vietnam"</a></li>
-        <li><a href="https://events.trade.gov/en/TradeGov/PioneeringSustainableConstruction-DigitalandGreenT/hotsite.php" target="_blank">"Pioneering to Sustainable Construction: Digital and Green Transformation, 2024</a></li>
-        <li><a href="https://toronto2023.isocarp.org" target="_blank">"59th ISOCARP World Planning Congress + 5th Urban Economy Forum (Toronto, Canada)</a></li>
-        <li><a href="https://www.eventscribe.net/2023/NPC/" target="_blank">"2023 National Planning Conference (Philadelphia, PA, USA)– the biggest conference in the planning field in the US</a></li>
-        <li><a href="https://eurochamvn.glueup.com/event/green-economy-forum-exhibition-gefe-2022-56987/" target="_blank">"Green Economy Forum & Exhibition (GEFE) 2022 hosted by EuroCham Vietnam</a></li>
-    </ul>
-    </div>
-  </section>
+        <div class="press-card">
+          <h2>What I wrote</h2>
+          <p>My published articles:</p>
+          <ul>
+            <li><a href="https://www.tinnhanhchungkhoan.vn/chuoi-cung-ung-thich-ung-chien-luoc-quan-trong-cho-doanh-nghiep-viet-post381266.html" target="_blank">"Resilient Supply Chains: A Critical Strategy for Vietnamese Businesses"</a></li>
+            <li><a href="https://thesaigontimes.vn/dau-tu-vao-kha-nang-chong-chiu-thien-tai-2-tu-nhan-thuc-den-hanh-dong/" target="_blank">"Investing in Resilience Part 2" - The Saigon Times</a></li>
+            <li><a href="https://thesaigontimes.vn/dau-tu-vao-kha-nang-chong-chiu-thien-tai-ky-1-co-hoi-chien-luoc-cho-viet-nam/" target="_blank">"Investing in Resilience Part 1" - The Saigon Times</a></li>
+            <li><a href="https://vir.com.vn/private-sector-offers-up-urban-potential-129699.html" target="_blank">"Private sector offers up urban potential, 2025 (No 1 most viewed)" - VIR</a></li>
+            <li><a href="https://vir.com.vn/epaper#" target="_blank">"The role of governance in shaping corporate development" - VIR Special Edition</a></li>
+            <li><a href="https://vir.com.vn/precise-planning-vital-for-relocation-of-ips-113193.html" target="_blank">"Precise planning vital for relocation of IPs 2024" - VIR</a></li>
+            <li><a href="https://vir.com.vn/the-pros-and-cons-of-ip-relocations-112404.html" target="_blank">"The pros and cons of IP relocations" - VIR</a></li>
+            <li><a href="https://vir.com.vn/opportunities-to-unlock-in-vietnams-green-finance-arena-110442.html" target="_blank">"Opportunities to unlock in Vietnam’s green finance arena" - VIR</a></li>
+            <li><a href="https://vir.com.vn/how-real-estate-developers-can-benefit-from-esg-considerations-99226.html" target="_blank">"How real estate developers can benefit from ESG considerations 2023, No 1 most viewed" - VIR</a></li>
+            <li><a href="https://baodautu.vn/dau-tu-tu-nhan-kien-tao-do-thi-thong-minh-ben-vung-d299998.html" target="_blank">"Đầu tư tư nhân kiến tạo đô thị thông minh, bền vững</a></li>
+            <li><a href="https://www.tinnhanhchungkhoan.vn/tai-chinh-do-thi-dich-chuyen-dong-von-xanh-post347485.html" target="_blank">"Tài chính đô thị “dịch chuyển” dòng vốn xanh"</a></li>
+            <li><a href="https://dantri.com.vn/kinh-doanh/tiep-can-esg-bat-dau-tu-dau-lam-sao-toi-da-hieu-qua-nguon-luc-20240411153558726.htm" target="_blank">"Navigating ESG: Initial Steps and Strategies for Optimal Resource Utilization (In Vietnamese) 2024" - Dan Tri</a></li>
+            <li><a href="https://thanhnien.vn/nha-o-binh-dan-lam-sao-tang-nguon-cung-hieu-qua-post1518943.html" target="_blank">"Affordable housing - How to increase the supply effectively</a></li>
+            <li><a href="https://e.vnexpress.net/news/perspectives/saigon-river-has-much-to-offer-and-hcmc-should-use-it-smartly-4515082.html" target="_blank">"Saigon River basin planning" - VNExpress Opinion</a></li>
+          </ul>
+        </div>
 
-<!--   <footer> 
+        <div class="press-card">
+          <h2>Wrote about me</h2>
+          <p>Here are some press mentions and features about me:</p>
+          <ul>
+            <li><a href="https://baodautu.vn/nguyen-thi-mai-nha-sang-lap-smartf-kien-tao-cong-dong-tai-chinh-thong-minh-cho-nguoi-viet-d343742.html" target="_blank">Featured in Bao Dau Tu about my work (in Vietnamese)</a></li>
+            <li><a href="https://thanhnien.vn/di-dau-cung-huong-ve-viet-nam-185230828155022757.htm" target="_blank">Featured in Thanh Nien about my work (in Vietnamese) - (Once a year) Special edition for Vietnam Independent Day</a></li>
+            <li><a href="https://thanhnien.vn/nu-ky-su-viet-nam-o-ngoi-truong-so-1-the-gioi-1851492425.htm" target="_blank">Featured in Thanh Nien about my work (in Vietnamese)" - top-read article of the day</a></li>
+            <li><a href="https://thanhnien.vn/tu-my-toi-viet-nam-theo-duoi-dam-me-song-nuoc-cuu-long-post1512582.html" target="_blank">Publicly endorsed the work of other (in Vietnamese) - Thanh Nien</a></li>
+            <li><a href="https://www.mekongeye.com/2024/01/15/houses-that-breathe-vietnamese-architects-turning-the-tide-to-tackle-climate-change" target="_blank">Expert opinion on Mekong Eye</a></li>
+            <li><a href="https://dantri.com.vn/kinh-doanh/quan-tri-doanh-nghiep-theo-dinh-huong-esg-lam-gi-va-tu-dau-20240817091217301.htm" target="_blank">Expert opinion on Dan Tri</a></li>
+            <li><a href="https://thanhnien.vn/nam-hoc-moi-co-con-am-anh-nha-ve-sinh-truong-hoc-18523082220024006.htm" target="_blank">Expert opinion on Thanh Nien</a></li>
+            <li><a href="https://tienphong.vn/tam-voc-nhung-cong-trinh-vi-cong-dong-post742025.tpo" target="_blank">In Tien Phong Newspaper about my graduation thesis (In Vietnamese)</a></li>
+          </ul>
+        </div>
+
+        <div class="press-card">
+          <h2>Media</h2>
+          <p>Featured in social media channels of organizations and programs:</p>
+          <ul>
+            <li><a href="https://www.facebook.com/share/p/14nQpvcMaF/" target="_blank">"Featured in the U.S. Consulate HCMC media channel about my contribution</a></li>
+            <li><a href="https://www.facebook.com/share/p/1Cbed3BooZ/" target="_blank">"Featured in the U.S. Consulate HCMC media channel</a></li>
+            <li><a href="https://www.humphreyfellowship.org/humphrey-alumni/east-asia-and-pacific/" target="_blank">"Highlighted Alumni's activities on the Humphrey Fellowship Program Website"</a></li>
+            <li><a href="https://www.facebook.com/usembassyhanoi/posts/pfbid034RtLNGcdvrk5ef6dqeasZHZYbV8SEmdCDCdUHEBTZXG1uwzvHqJjPn52ePaW7RY5l" target="_blank">"Featured in the U.S. Embassy in Vietnam media channel - 2022</a></li>
+            <li><a href="https://dusp.mit.edu/spurs-fellows/mai-thi-nguyen" target="_blank">"MIT Department of Urban Studies and Planning (MIT DUSP - SPURS)</a></li>
+            <li><a href="https://twitter.com/HumphreyProgram/status/1492150263515578368?s=20&t=YoyXl313ZsJK50T9z6Szhw" target="_blank">"Humphrey Fellowship featured outstanding female engineers</a></li>
+          </ul>
+        </div>
+
+        <div class="press-card">
+          <h2>Speaking</h2>
+          <p>participation as a speaker panelist judge reviewer</p>
+          <ul>
+            <li><a href="https://events.trade.gov/TradeGov/USVietnamGettingtoNet-ZeroRoadmaptoIndustryDev/" target="_blank">"U.S. Vietnam Getting to Net-Zero: Roadmap to Sustainable Industrial Development, 2025"</a></li>
+            <li><a href="https://open.spotify.com/episode/2XPeTRU1qiMQIUqhxR3Pwf" target="_blank">"Guest Appearance on the Vietnam Weekly Podcast - Building Resilience in Vietnam"</a></li>
+            <li><a href="https://nordchamvietnam.com/event/green-construction-conference/" target="_blank">"2024 NordCham Vietnam Green Construction Conference, HCMC"</a></li>
+            <li><a href="https://vnanet.vn/en/anh/vna-photos-1027/conference-mobilises-resources-for-nature-based-agricultural-development-7282961.html" target="_blank">"Mobilises resources for nature-based agricultural development, 2024, hosted by WWF and Ministry of Agriculture and Rural Development, in Ca Mau, Vietnam"</a></li>
+            <li><a href="https://events.trade.gov/en/TradeGov/PioneeringSustainableConstruction-DigitalandGreenT/hotsite.php" target="_blank">"Pioneering to Sustainable Construction: Digital and Green Transformation, 2024</a></li>
+            <li><a href="https://toronto2023.isocarp.org" target="_blank">"59th ISOCARP World Planning Congress + 5th Urban Economy Forum (Toronto, Canada)</a></li>
+            <li><a href="https://www.eventscribe.net/2023/NPC/" target="_blank">"2023 National Planning Conference (Philadelphia, PA, USA)– the biggest conference in the planning field in the US</a></li>
+            <li><a href="https://eurochamvn.glueup.com/event/green-economy-forum-exhibition-gefe-2022-56987/" target="_blank">"Green Economy Forum & Exhibition (GEFE) 2022 hosted by EuroCham Vietnam</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Uncomment if you want the footer back -->
+  <!--
+  <footer>
     <div class="footer-container">
       <div class="footer-content">
         <p>&copy; 2025 MN. All Rights Reserved.</p>
@@ -198,8 +368,8 @@
         <a href="#" class="social-link">Instagram</a>
       </div>
     </div>
-  </footer>-->
+  </footer>
+  -->
 
-  <script src="script.js"></script>
 </body>
 </html>
