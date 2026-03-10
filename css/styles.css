@@ -124,25 +124,22 @@ footer {
 
 @media (max-width: 768px) {
     .section {
-        position: static;
-        transform: none;
-        margin: 2rem auto;
+        position: absolute;
+        top: 28%;                   /* ← lower than 50% — play with 22%–35% */
+        left: 5%;
+        transform: translateY(0);   /* remove the -50% */
         width: 90%;
+        max-width: 480px;
+        padding: 1.6rem;
     }
 
-    body {
-        background-position: center top;
-        background-size: contain;
-    }
-
-    .footer-container {
+    .nav {
         flex-direction: column;
-        text-align: center;
+        gap: 0.5rem;               /* tighter vertical spacing */
     }
-}
 
-@media (max-width: 480px) {
-    .section {
-        padding: 1.25rem;
+    .nav a {
+        margin: 0.3rem 0;          /* very small vertical margin */
+        padding: 0.65rem 1.2rem;
     }
 }
