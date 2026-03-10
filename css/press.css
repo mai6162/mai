@@ -41,7 +41,23 @@ body {
     margin-bottom: 10px;
     text-align: left;
 }
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 1rem;
+}
 
+.content-left { flex: 1 1 50%; }
+.image-right  { flex: 1 1 50%; }
+
+.photo { max-width: 100%; height: auto; }
+
+@media (max-width: 768px) {
+  .two-column { flex-direction: column; }
+  .content-left, .image-right { flex: 1 1 100%; }
+}
 /* Responsive Header Title */
 @media (max-width: 768px) {
     .header h1 {
