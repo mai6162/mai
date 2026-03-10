@@ -31,9 +31,9 @@ body {
     min-height: 100vh;
 }
 
-/* Header area – aligned left */
+/* Header area – always left-aligned */
 header {
-    padding: 20px 40px;
+    padding: 20px 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -45,7 +45,7 @@ header {
     text-align: left;
 }
 
-/* Navigation – horizontal, left-aligned */
+/* Navigation – always horizontal + left-aligned */
 .nav {
     display: flex;
     flex-direction: row;
@@ -61,6 +61,7 @@ header {
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
+    white-space: nowrap;          /* prevents awkward line breaks inside links */
 }
 
 .nav a:hover {
@@ -115,7 +116,7 @@ footer {
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -130,9 +131,8 @@ footer {
 .footer-socials {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;     /* also left-aligned to match header/nav */
     gap: 15px;
-    margin: 10px 0;
 }
 
 .social-link {
@@ -152,15 +152,12 @@ footer {
 }
 
 /* ────────────────────────────────────────
-   RESPONSIVE
+   RESPONSIVE – no centering or column for nav
 ───────────────────────────────────────── */
 
 @media (max-width: 1024px) {
-    header {
-        padding: 20px 30px;
-    }
-    .footer-container {
-        padding: 0 30px;
+    header, .footer-container {
+        padding: 20px 25px;
     }
 }
 
@@ -171,18 +168,16 @@ footer {
     }
 
     header {
-        padding: 20px 25px;
-        align-items: center;           /* center on tablet/mobile for better feel */
+        padding: 18px 20px;
     }
 
     .header h1 {
-        text-align: center;
         font-size: 2.2rem;
     }
 
     .nav {
-        justify-content: center;       /* center nav items on smaller screens */
         gap: 10px;
+        /* stays horizontal + left-aligned */
     }
 
     .section {
@@ -195,15 +190,18 @@ footer {
     }
 
     .footer-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 25px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .footer-socials {
+        justify-content: flex-start;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        padding: 15px 20px;
+        padding: 15px 18px;
     }
 
     .header h1 {
@@ -211,16 +209,13 @@ footer {
     }
 
     .nav {
-        flex-direction: column;        /* only stack nav vertically on very small screens */
-        align-items: center;
         gap: 8px;
+        /* still horizontal, will wrap if too many links */
     }
 
     .nav a {
-        width: 85%;
-        text-align: center;
         font-size: 0.95rem;
-        padding: 10px;
+        padding: 8px 12px;
     }
 
     .section {
