@@ -1,225 +1,284 @@
-/* ==========================================================================
-   Font Face
-   ========================================================================== */
 @font-face {
     font-family: 'Columbia';
-    src: url('./Columbia-Light.woff2') format('woff2'),
-         url('./Columbia-Light.woff') format('woff'),
+    src: url('./Columbia Light.ttf') format('woff'),
          url('./Columbia Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
 }
 
-/* ==========================================================================
-   Reset & Base
-   ========================================================================== */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
-/* ==========================================================================
-   Body & Background
-   ========================================================================== */
+/* Body and Global Styling */
 body {
-    font-family: 'Columbia', system-ui, -apple-system, sans-serif;
+    font-family: 'Columbia', sans-serif;
     line-height: 1.6;
+    background-color: #5ac47d00;
     color: #333;
-    background-image: url('169 full.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
+/* Headings Styling */
 h1, h2, h3, h4 {
     font-weight: 700;
-    color: #333;
 }
 
-h1 {
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    margin-bottom: 0.8rem;
-}
-
-h2 {
-    font-size: clamp(1.6rem, 5vw, 2.4rem);
-    margin-bottom: 1.2rem;
-}
-
-/* ==========================================================================
-   Links & Navigation
-   ========================================================================== */
+/* Link Styling */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+/* Header Title */
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
+/* Navigation Link Styling */
 .nav a {
     font-size: 1rem;
     color: #413e3e;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    transition: all 0.25s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav a:hover,
-.nav a:focus {
+.nav a:hover {
     background-color: #da554b;
-    color: white;
+    color: #fff;
 }
 
-/* ==========================================================================
-   Main Content Area
-   ========================================================================== */
-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        margin: 10px 0;
+    }
 }
 
-.section {
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(6px);
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    padding: 2rem;
-    width: 100%;
-    max-width: 640px;
-}
-
-/* Remove bullets from ALL lists inside section */
-.section ul,
-.section ol {
-    list-style: none;
-    padding-left: 0;
+/* For the whole page */
+body {
+    background-image: url('169 full.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
-.section li {
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-    color: #444;
-}
-
-/* If you still want to keep .about-list specific styling */
-.about-list li {
-    padding-left: 1.4rem;
+/* Transparent overlay */
+body {
     position: relative;
 }
 
-.about-list li::before {
-    content: "•";
+body::before {
+    content: "";
     position: absolute;
-    left: 0;
-    color: #da554b;
+    top: 100px;
+    left: 200px;
+    right: 200px;
+    bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.212);
+    z-index: 0;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-footer {
-    background: rgba(248, 248, 248, 0.9);
+.text-container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+h1, p {
     color: #333;
-    padding: 1.8rem 1rem;
-    border-top: 1px solid #e0e0e0;
-    margin-top: auto;
+}
+
+body {
+    font-family: 'Columbia', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    .nav a {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+    }
+    .photo-frame {
+        height: 150px;
+    }
+    .resume-section h2 {
+        font-size: 2rem;
+    }
+    .footer-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ensure full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Columbia", sans-serif;
+}
+
+/* Center-left section */
+.section {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 80%;
+    max-width: 600px;
+}
+
+.section * {
+    z-index: 11;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .section {
+        left: 5%;
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        left: 2%;
+        width: 96%;
+        padding: 1rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-list li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Container */
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+/* Sticky footer layout */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+main, .section, .content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer Styles — updated for responsiveness */
+footer {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    width: 100%;
     text-align: center;
+    margin-top: auto;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    text-align: left;
+}
+
+.footer-content p {
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
 .footer-socials {
     display: flex;
-    gap: 1.4rem;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
 }
 
 .social-link {
     color: #333;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.social-link i {
     font-size: 1.4rem;
-    transition: color 0.25s ease;
 }
 
 .social-link:hover {
-    color: #da554b;
+    color: #0077b5;
 }
 
-/* ==========================================================================
-   Responsive Adjustments
-   ========================================================================== */
 @media (max-width: 768px) {
-    body {
-        background-position: center top;
-        background-size: cover;
-    }
-
-    .nav {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .nav a {
-        padding: 0.8rem 1.5rem;
-        font-size: 1.05rem;
-    }
-
-    .section {
-        padding: 1.6rem;
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 1rem;
-    }
-
-    .section {
-        padding: 1.4rem;
-    }
-
-    h1 {
-        font-size: 2.1rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
     .footer-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .footer-socials {
-        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .footer-socials a {
+        margin: 10px;
     }
 }
