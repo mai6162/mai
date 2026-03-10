@@ -66,24 +66,38 @@
 .two-column {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  align-items: stretch;
+  gap: 2.5rem;                    /* space between text and image */
+  align-items: stretch;           /* ← makes both columns same height */
+  justify-content: space-between;
   padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* optional: background & shadow for the whole section */
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 12px;
 }
 
-.content-left { flex: 1 1 50%; }
-.image-right  { flex: 1 1 50%; }
+.content-left {
+  flex: 1 1 45%;                  /* flexible but prefers ~half */
+  min-width: 300px;
+}
 
 .image-right {
-  display: flex;
+  flex: 1 1 45%;
+  min-width: 300px;
+  position: relative;             /* ← important for absolute positioning trick */
 }
 
 .photo {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100%;                   /* ← fills the entire height of .image-right */
+  object-fit: cover;              /* crops to fill nicely – use 'contain' if you hate cropping */
+  object-position: center;        /* centers the crop area */
   border-radius: 8px;
-  display: block;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1); /* optional */
 }
 
 @media (max-width: 768px) {
