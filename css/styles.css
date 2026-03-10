@@ -4,19 +4,22 @@
          url('./Columbia Light.ttf') format('truetype');
 }
 
-/* General Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and Global Styling */
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Columbia', sans-serif;
     line-height: 1.6;
-    background-color: #5ac47d00;
     color: #333;
+    background-color: #5ac47d00;
     background-image: url('169 full.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,45 +31,44 @@ body {
     min-height: 100vh;
 }
 
-/* Headings Styling */
-h1, h2, h3, h4 {
-    font-weight: 700;
+/* Header area – aligned left */
+header {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* Link Styling */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header Title */
 .header h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: 8px;
+    text-align: left;
 }
 
-/* Navigation Link Styling */
+/* Navigation – horizontal, left-aligned */
 .nav {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 15px;
+    gap: 12px;
 }
+
 .nav a {
     font-size: 1rem;
     color: #413e3e;
     padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
 }
+
 .nav a:hover {
     background-color: #da554b;
     color: #fff;
 }
 
-/* Text Container / Overlay Content */
+/* Main content – centered overlay */
 main {
     flex: 1;
     display: flex;
@@ -76,13 +78,12 @@ main {
 }
 
 .section {
-    background: rgba(255, 255, 255, 0.88);   /* slightly more opaque than before for readability */
+    background: rgba(255, 255, 255, 0.88);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
 }
 
 .section h2 {
@@ -101,7 +102,7 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: #f8f8f8;
     color: #333;
@@ -114,7 +115,7 @@ footer {
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -151,8 +152,17 @@ footer {
 }
 
 /* ────────────────────────────────────────
-   RESPONSIVE ADJUSTMENTS (only these parts changed/improved)
+   RESPONSIVE
 ───────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 30px;
+    }
+    .footer-container {
+        padding: 0 30px;
+    }
+}
 
 @media (max-width: 768px) {
     body {
@@ -160,62 +170,70 @@ footer {
         background-position: center top;
     }
 
-    .nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .nav a {
-        width: 80%;
-        text-align: center;
-        margin: 6px 0;
-    }
-
-    .section {
-        padding: 1.5rem;
-        max-width: 90%;
+    header {
+        padding: 20px 25px;
+        align-items: center;           /* center on tablet/mobile for better feel */
     }
 
     .header h1 {
-        font-size: 2rem;
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .nav {
+        justify-content: center;       /* center nav items on smaller screens */
+        gap: 10px;
+    }
+
+    .section {
+        padding: 1.8rem;
+        max-width: 90%;
     }
 
     .section h2 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
 
     .footer-container {
         flex-direction: column;
         text-align: center;
-    }
-
-    .footer-socials {
-        justify-content: center;
+        padding: 0 25px;
     }
 }
 
 @media (max-width: 480px) {
+    header {
+        padding: 15px 20px;
+    }
+
     .header h1 {
-        font-size: 1.75rem;
+        font-size: 1.9rem;
+    }
+
+    .nav {
+        flex-direction: column;        /* only stack nav vertically on very small screens */
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav a {
+        width: 85%;
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 10px;
     }
 
     .section {
-        padding: 1.2rem;
+        padding: 1.4rem;
         max-width: 94%;
     }
 
     .section h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .about-list li {
         font-size: 1rem;
-    }
-
-    .nav a {
-        font-size: 0.95rem;
-        padding: 10px;
     }
 
     .footer-content p,
