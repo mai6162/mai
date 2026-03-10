@@ -3,23 +3,18 @@
     src: url('./Columbia Light.ttf') format('woff'),
          url('./Columbia Light.ttf') format('truetype');
 }
-
-/* Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-html, body {
-    height: 100%;
-}
-
+/* Body and Global Styling */
 body {
     font-family: 'Columbia', sans-serif;
     line-height: 1.6;
-    color: #333;
     background-color: #5ac47d00;
+    color: #333;
     background-image: url('169 full.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,71 +23,123 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    justify-content: space-between;
+    height: 100vh;
 }
-
-/* Header area – always left-aligned */
-header {
-    padding: 20px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+/* Headings Styling */
+h1, h2, h3, h4 {
+    font-weight: 700;
 }
-
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Header Title */
 .header h1 {
     font-size: 2.5rem;
-    margin-bottom: 8px;
-    text-align: left;
+    margin-bottom: 10px;
 }
-
-/* Navigation – always horizontal + left-aligned */
-.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
+/* Navigation Link Styling */
 .nav a {
     font-size: 1rem;
     color: #413e3e;
     padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    text-decoration: none;
-    white-space: nowrap;          /* prevents awkward line breaks inside links */
 }
-
 .nav a:hover {
     background-color: #da554b;
     color: #fff;
 }
-
-/* Main content – centered overlay */
-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav a {
+        margin: 10px 0;
+    }
+}
+/* Text Container */
+.text-container {
+    position: relative;
+    z-index: 2;
     padding: 20px;
 }
-
+h1, p {
+    color: #333;
+}
+/* Responsive styles */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    .nav a {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+    }
+    .photo-frame {
+        height: 150px;
+    }
+    .resume-section h2 {
+        font-size: 2rem;
+    }
+    .footer-content p {
+        font-size: 0.9rem;
+    }
+}
+/* Ensure full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    flex: 1;
+    font-family: 'Columbia', sans-serif;
+}
+/* Center-left section */
 .section {
-    background: rgba(255, 255, 255, 0.88);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 80%;
     max-width: 600px;
 }
-
-.section h2 {
+.section * {
+    z-index: 11;
+    position: relative;
+}
+@media (max-width: 768px) {
+    .section {
+        left: 5%;
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .section {
+        left: 2%;
+        width: 96%;
+        padding: 1rem;
+    }
+}
+h2 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 1rem;
 }
-
 .about-list {
     list-style-type: none;
     padding-left: 0;
@@ -102,39 +149,48 @@ main {
     color: #555;
     margin-bottom: 0.5rem;
 }
-
-/* Footer */
+/* Container */
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1200px;
+}
+/* Sticky footer layout */
+main, .section, .content {
+    flex: 1;
+    padding: 20px;
+}
+/* Footer Styles — updated for responsiveness */
 footer {
     background-color: #f8f8f8;
     color: #333;
     padding: 20px 0;
     border-top: 1px solid #ddd;
     width: 100%;
+    text-align: center;
     margin-top: auto;
 }
-
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
 }
-
 .footer-content p {
     font-size: 1rem;
     margin: 10px 0;
 }
-
 .footer-socials {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;     /* also left-aligned to match header/nav */
+    justify-content: center;
     gap: 15px;
+    margin: 10px 0;
 }
-
 .social-link {
     color: #333;
     font-size: 1.2rem;
@@ -150,89 +206,23 @@ footer {
 .social-link:hover {
     color: #0077b5;
 }
-
-/* ────────────────────────────────────────
-   RESPONSIVE – no centering or column for nav
-───────────────────────────────────────── */
-
-@media (max-width: 1024px) {
-    header, .footer-container {
-        padding: 20px 25px;
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-socials {
+        justify-content: center;
+    }
+    .footer-socials a {
+        margin: 10px;
     }
 }
-
+/* Responsive background adjustments */
 @media (max-width: 768px) {
     body {
         background-size: contain;
         background-position: center top;
-    }
-
-    header {
-        padding: 18px 20px;
-    }
-
-    .header h1 {
-        font-size: 2.2rem;
-    }
-
-    .nav {
-        gap: 10px;
-        /* stays horizontal + left-aligned */
-    }
-
-    .section {
-        padding: 1.8rem;
-        max-width: 90%;
-    }
-
-    .section h2 {
-        font-size: 1.8rem;
-    }
-
-    .footer-container {
-        justify-content: flex-start;
-        text-align: left;
-    }
-
-    .footer-socials {
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 15px 18px;
-    }
-
-    .header h1 {
-        font-size: 1.9rem;
-    }
-
-    .nav {
-        gap: 8px;
-        /* still horizontal, will wrap if too many links */
-    }
-
-    .nav a {
-        font-size: 0.95rem;
-        padding: 8px 12px;
-    }
-
-    .section {
-        padding: 1.4rem;
-        max-width: 94%;
-    }
-
-    .section h2 {
-        font-size: 1.6rem;
-    }
-
-    .about-list li {
-        font-size: 1rem;
-    }
-
-    .footer-content p,
-    .social-link {
-        font-size: 0.9rem;
     }
 }
