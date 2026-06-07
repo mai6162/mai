@@ -12,29 +12,128 @@
 </head>
 <body>
 
-  <header class="header">
-    <h1 class="logo">Mai Nguyen</h1>
-    <nav class="nav">
-      <a href="../">Home</a>
-      <a href="../resume/">Resume</a>
-      <a href="../press/">Press</a>
-      <a href="../blog/" class="active">Blog</a>
-      <a href="../contact/">Contact</a>
-    </nav>
-  </header>
-
   <div class="container">
-    <div class="section">
+    <header class="header">
+      <h1>Mai Nguyen</h1>
+      <nav class="nav">
+        <a href="../">Home</a>
+        <a href="../resume/">Resume</a>
+        <a href="../press/">Press</a>
+        <a href="../blog/" class="active">Blog</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+    </header>
+
+    <section class="section">
       <h2>✍️ Blog & Insights</h2>
       <p style="font-size: 1.15rem; color: #555; margin-bottom: 2rem;">
         Thoughts on smart mobility, sustainable finance, urban technology, and Southeast Asia’s transformations.
       </p>
 
-      <div class="blog-posts">
-        <article class="blog-post">
+      <div class="blog-grid">
+        <div class="blog-card">
           <h3><a href="#">The Future of Parking in Autonomous Cities</a></h3>
           <p class="date">June 2026</p>
           <p>How AI, real-time data, and IoT will reshape urban parking infrastructure for both human drivers and autonomous vehicles.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+
+        <div class="blog-card">
+          <h3><a href="#">Sustainable Finance & Green Bonds in Vietnam</a></h3>
+          <p class="date">May 2026</p>
+          <p>Lessons from IFC projects and innovative financing models for climate-resilient urban development in Southeast Asia.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+
+        <div class="blog-card">
+          <h3><a href="#">MIT DUSP Reflections: Cities as Conversations</a></h3>
+          <p class="date">April 2026</p>
+          <p>Key takeaways from my time at MIT on participatory planning, equity, and technology in urban futures.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/mai12/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/maika6162" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/maika6162" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="https://open.spotify.com/show/4CuFpeZCwZW0PLlLQl6f01" target="_blank" class="social-link"><i class="fab fa-spotify"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.8rem 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .blog-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 1.8rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      border-left: 5px solid #da554b;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(218, 85, 75, 0.18);
+    }
+
+    .blog-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-size: 1.55rem;
+      color: #333;
+    }
+
+    .blog-card h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .blog-card h3 a:hover {
+      color: #da554b;
+    }
+
+    .date {
+      color: #777;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .read-more {
+      color: #da554b;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .active {
+      background-color: #da554b !important;
+      color: white !important;
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</body>
+</html>          <p>How AI, real-time data, and IoT will reshape urban parking infrastructure for both human drivers and autonomous vehicles.</p>
           <a href="#" class="read-more">Read more →</a>
         </article>
 
