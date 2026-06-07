@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Mai Nguyen</title>
-  <meta name="description" content="Insights on urban planning, smart mobility, sustainable finance, city innovation, and Southeast Asia’s urban future." />
+  <meta name="description" content="Collection of thoughts on various topics" />
 
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="icon" href="/favicon.ico" />
@@ -25,12 +25,12 @@
     </header>
 
     <div class="container">
-      <section class="blog-section">
-        <h2>✍️ Blog & Insights</h2>
-        <p>Writing about the future of cities, smart mobility, sustainable finance, urban tech, and Southeast Asia’s transformations.</p>
+      <section class="section" style="position: static; top: auto; left: auto; transform: none; width: 100%; max-width: 100%; margin-top: 2rem;">
+        <h2>Blog</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">Collection of thoughts on various topics.</p>
         
         <div class="blog-posts">
-          <!-- Replace these with real posts later -->
+          <!-- Example posts – update with real links later -->
           <article class="blog-post">
             <h3><a href="#">The Future of Parking in Autonomous Cities</a></h3>
             <p class="date">June 2026</p>
@@ -62,69 +62,60 @@
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
           <a href="https://x.com/maika6162" target="_blank" class="social-link">
-            <i class="fab fa-x-twitter"></i> X
+            <i class="fab fa-twitter"></i> X
           </a>
-          <!-- Add more social links as needed -->
+          <a href="https://www.instagram.com/maika6162" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <!-- Add other social links as in index.html -->
         </div>    
       </div>
     </footer>
 
     <style>
-      /* Blog-specific styles that complement styles.css */
-      .blog-section {
-        padding: 2rem 0;
-      }
-      
-      .blog-section h2 {
-        font-size: 2.8rem;
-        color: #333;
-        margin-bottom: 0.8rem;
-        text-align: left;
-      }
-      
+      /* Additional styles to work well with your existing styles.css */
       .blog-posts {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
       }
       
       .blog-post {
-        background: rgba(255, 255, 255, 0.92);
+        background: rgba(255, 255, 255, 0.95);
         padding: 1.8rem;
         margin-bottom: 2rem;
         border-radius: 8px;
         border-left: 5px solid #da554b;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        transition: transform 0.2s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
       }
       
       .blog-post:hover {
-        transform: translateY(-4px);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
       }
       
       .blog-post h3 {
-        margin-bottom: 0.6rem;
         color: #da554b;
+        margin-bottom: 0.5rem;
       }
       
       .date {
         color: #666;
         font-size: 0.95rem;
-        margin-bottom: 0.9rem;
+        margin-bottom: 1rem;
       }
       
       .read-more {
         color: #da554b;
         font-weight: 600;
-        text-decoration: none;
       }
       
       .read-more:hover {
         text-decoration: underline;
       }
 
-      @media (max-width: 768px) {
-        .blog-post {
-          padding: 1.4rem;
-        }
+      /* Override some global styles for blog */
+      .section {
+        background: rgba(255,255,255,0.92) !important;
       }
     </style>
 </body>
